@@ -27,7 +27,7 @@ body {
 }
 
 body::before {
-  animation: paperDrift 10s infinite;
+  animation: breath 6s infinite;
   content: "";
   z-index: -10;
   position: absolute;
@@ -42,7 +42,7 @@ body::before {
 }
 
 /* background: linear-gradient(0deg, #d7deaa, #336ca663), */
-@keyframes paperDrift {
+@keyframes breath {
   0% {
     filter: contrast(100%) brightness(100%);
     background: linear-gradient(0deg, #ffdd0080, #336ca680),

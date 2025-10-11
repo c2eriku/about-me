@@ -1,13 +1,10 @@
 'use client';
 
-import Navigation from '@/components/InteractHub/Navigation';
 import styles from './about.module.css';
 import VantaBackground from '@/components/VantaBackground';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import clsx from 'clsx';
-import { rotate } from 'three/tsl';
 import { useState } from 'react';
 import { FaGithubAlt } from 'react-icons/fa6';
 import { IoMail } from 'react-icons/io5';
@@ -21,24 +18,21 @@ export default function About() {
   return (
     <>
       <VantaBackground></VantaBackground>
-      <div className="flex h-dvh p-16">
+      <div className="flex h-dvh w-dvw p-2 sm:p-16">
         <div className="flex-1">
           <div className="border-light relative h-full border-2 p-12">
-            <div className="inline-flex">
+            <div className="inline-flex flex-wrap justify-center">
               <div className="relative">
                 <motion.div
                   className={styles['gradient-outline']}
-                  animate={{ rotate: hovered ? 265 : 0 }}
-                  transition={{ duration: 0.2 }}
+                  animate={{ rotate: hovered ? 625 : 0 }}
+                  transition={{ duration: 0.5 }}
                 />
                 <motion.div
                   onHoverStart={() => setHovered(true)}
                   onHoverEnd={() => setHovered(false)}
-                  whileHover={{
-                    scale: 1.05,
-                    transition: { duration: 0.1 },
-                  }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={{ scale: 1.08, transition: { duration: 0.5 } }}
+                  transition={{ duration: 0.5 }}
                 >
                   <Image
                     src="https://avatars.githubusercontent.com/u/92637603?v=4"
@@ -50,7 +44,7 @@ export default function About() {
                 </motion.div>
               </div>
 
-              <div className="mt-6 ml-8 flex flex-col">
+              <div className="mt-6 flex flex-col text-center sm:ml-8 sm:text-left">
                 <h1 className="text-4xl font-extrabold tracking-tight">c2eriku</h1>
                 <h2 className="text-2xl font-bold">Full Stack Developer</h2>
                 <div className="mt-2 flex gap-2">
