@@ -1,7 +1,7 @@
 'use client';
 import { HTMLAttributes, ReactNode } from 'react';
 import Navigation from './Navigation';
-import { AnimatePresence, motion, scale } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 interface InteractHubProps extends HTMLAttributes<HTMLDivElement> {

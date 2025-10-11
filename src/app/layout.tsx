@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import InteractHub from '@/components/InteractHub/InteractHub';
+import Script from 'next/dist/client/script';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,9 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <InteractHub>{children}</InteractHub>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-serif antialiased`}>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+          strategy="beforeInteractive"
+        />
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"> */}
+        <div className="">
+          {/* <InteractHub>{children}</InteractHub> */}
+          {children}
         </div>
       </body>
     </html>

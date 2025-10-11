@@ -8,6 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-light: #969b72;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -22,5 +23,37 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+body::before {
+  animation: paperDrift 10s infinite;
+  content: "";
+  z-index: -10;
+  position: absolute;
+  display: block;
+  width: 100dvw;
+  height: 100dvh;
+  opacity: 0.5;
+  filter: contrast(100%) brightness(100%);
+  background:
+    linear-gradient(0deg, #d7deaa, #336ca663),
+    url("/images/noise.svg");
+}
+
+/* background: linear-gradient(0deg, #d7deaa, #336ca663), */
+@keyframes paperDrift {
+  0% {
+    filter: contrast(100%) brightness(100%);
+    background: linear-gradient(0deg, #ffdd0080, #336ca680),
+  }
+
+  50% {
+    filter: contrast(200%) brightness(100%);
+  }
+
+  100% {
+    filter: contrast(100%) brightness(100%);
+    background: linear-gradient(0deg, #ffdd0080, #336ca680),
+  }
 }
