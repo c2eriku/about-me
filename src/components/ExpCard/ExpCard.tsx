@@ -23,35 +23,33 @@ export default function ExpCard() {
   ];
 
   return (
-    <div className="flex p-6 pr-12 pl-1">
+    <div className="grid grid-cols-[auto_1fr] gap-4 p-6 pr-12 pl-1">
+      {/* 左側公司 icon */}
       <div aria-label="companyIcon">
-        <div className="mr-4 rounded-xl bg-linear-to-b from-cyan-100 to-blue-100 p-4">
+        <div className="w-fit rounded-xl bg-gradient-to-b from-cyan-100 to-blue-100 p-4">
           <BsBank2 size={32} />
         </div>
       </div>
 
-      <div>
-        <div>
-          <h1 className="text-2xl">Software Engineer</h1>
-        </div>
-        <div>
-          <h2 className="text-lg">Commercial Bank</h2>
-        </div>
-        <div className="flex gap-1">
-          {techData.map((techData, index) => (
-            <TechBadge key={index} title={techData.title} color={techData.color}>
-              {techData.children}
-            </TechBadge>
-          ))}
-        </div>
-        <div>
-          <ul>
-            {jds.map((jd, index) => (
-              <li key={index}>{jd}</li>
-            ))}
-          </ul>
-        </div>
+      {/* 右側主要內容 */}
+      <div className="space-y-2">
+        <h1 className="text-2xl">Software Engineer</h1>
+        <h2 className="text-lg">Commercial Bank</h2>
       </div>
+
+      <div className="col-span-2 flex flex-wrap gap-1 sm:col-start-2">
+        {techData.map((techData, index) => (
+          <TechBadge key={index} title={techData.title} color={techData.color}>
+            {techData.children}
+          </TechBadge>
+        ))}
+      </div>
+
+      <ul className="col-span-2 list-inside list-disc text-sm text-gray-700 sm:col-start-2">
+        {jds.map((jd, index) => (
+          <li key={index}>{jd}</li>
+        ))}
+      </ul>
     </div>
   );
 }

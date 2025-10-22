@@ -48,18 +48,18 @@ export default function Home() {
                     onHoverEnd={() => setHovered(false)}
                     whileHover={{ scale: 1.08, transition: { duration: 0.5 } }}
                     transition={{ duration: 0.5 }}
+                    className="relative aspect-square w-42 sm:w-62"
                   >
                     <Image
                       src="https://avatars.githubusercontent.com/u/92637603?v=4"
                       alt="Profile picture"
                       className="rounded-full p-4"
-                      width={250}
-                      height={250}
+                      fill
                     />
                   </motion.div>
                 </div>
 
-                <div className="relative mt-6 flex flex-col text-center sm:ml-8 sm:text-left">
+                <div className="relative mt-2 flex flex-col text-center sm:mt-6 sm:ml-8 sm:text-left">
                   <h1 className="text-[clamp(2rem,5vw,3rem)] font-extrabold">Hi! I&apos;m Eric</h1>
                   <h2 className="text-2xl font-bold">Full Stack Developer</h2>
                   <div className="my-2 flex justify-center gap-2 sm:justify-start">
