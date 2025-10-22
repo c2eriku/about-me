@@ -1,0 +1,89 @@
+.glass-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 28rem;
+    flex-direction: column;
+    border-radius: 2rem;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+        inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.dark .glass-container {
+    border-color: rgba(55, 65, 81, 0.2);
+    background-color: rgba(17, 24, 39, 0.3);
+}
+
+
+.bg-image {
+    background: #000000;
+    background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&h=1000&q=80);
+}
+
+
+/* LIQUID GLASS STYLES */
+
+.liquidGlass-wrapper {
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.35);
+    overflow: hidden;
+    box-shadow:
+        0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1),
+        inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+        inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+
+    backdrop-filter: blur(2px);
+}
+
+/* OTHER STYLES */
+
+body1 {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("https://media.istockphoto.com/id/1430511443/vector/christmas-mistletoe-foliage-and-berries-vector-seamless-pattern.jpg?s=612x612&w=0&k=20&c=oqxlH7ytgd5yjBQroACirJ1gH7Au1tq8gmsdeGd-Crk=") center center;
+    background-size: 500px;
+    font-weight: 300;
+
+    animation: moveBackground 60s linear infinite;
+}
+
+
+.dock {
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+/* NOTE: You need to duplicate styles onto the child `div`s (`> div`) so that the glass wrapper and all the layers are affected in the same way.  */
+.dock,
+.dock>div {
+    border-radius: 2rem;
+}
+
+
+.dock img {
+    width: 75px;
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    cursor: pointer;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -1500%;
+    }
+}

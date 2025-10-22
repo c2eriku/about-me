@@ -3,32 +3,27 @@
 import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
-export default function VantaBackground() {
+export default function VantaNet() {
   const vantaRef = useRef(null);
   const vantaEffect = useRef(null);
 
   useEffect(() => {
     const tryInit = () => {
       if (!vantaEffect.current && window.VANTA && window.THREE && vantaRef.current) {
-        vantaEffect.current = window.VANTA.BIRDS({
+        vantaEffect.current = window.VANTA.NET({
           el: vantaRef.current,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          speedLimit: 3.0,
-          quantity: 3.0,
-          colorMode: 'varianceGradient',
-          separation: 90.0,
-          alignment: 10.0,
-          scale: 1.5,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
           scaleMobile: 1.0,
-          backgroundAlpha: 0.0,
-          color1: 0x111111,
-          color2: 0xe0f0ff,
-
-          // color1: 0xff8c8c,
-          // color2: 0xffffff,
-          birdSize: 1,
+          points: 13.0,
+          maxDistance: 15.0,
+          spacing: 13.0,
+          color: 0xb8c4d4, // 主線色（柔藍灰線）
+          backgroundColor: 0xf5f5f5, // 對應你的主背景
         });
       }
     };
@@ -53,7 +48,7 @@ export default function VantaBackground() {
   return (
     <>
       <Script
-        src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"
+        src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"
         strategy="afterInteractive"
       />
 

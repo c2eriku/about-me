@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  --background: #FDFCF9;
   --foreground: #171717;
 }
 
@@ -13,47 +13,53 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-ubuntu);
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+.light {
+  --bg-primary: #F5F5F5;
+  --bg-secondary: #E0E5EC;
+  /* --bg-secondary: #1a202c; */
+}
+
+.dark {
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  /* --bg-secondary: #005eff; */
+  color: #f7fafc;
+}
+
 body::before {
-  animation: breath 6s infinite;
+  animation: breath 10s infinite;
   content: "";
   z-index: -10;
   position: absolute;
   display: block;
-  width: 100dvw;
-  height: 100dvh;
-  opacity: 0.5;
+  inset: 0;
+  opacity: 0.3;
   filter: contrast(100%) brightness(100%);
   background:
-    linear-gradient(0deg, #d7deaa, #336ca663),
-    url("/images/noise.svg");
+    url("/images/noise.svg"),
+    linear-gradient(160deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary));
 }
 
 /* background: linear-gradient(0deg, #d7deaa, #336ca663), */
 @keyframes breath {
   0% {
     filter: contrast(100%) brightness(100%);
-    background: linear-gradient(0deg, #ffdd0080, #336ca680),
   }
 
   50% {
-    filter: contrast(200%) brightness(100%);
+    filter: contrast(150%) brightness(100%);
   }
 
   100% {
     filter: contrast(100%) brightness(100%);
-    background: linear-gradient(0deg, #ffdd0080, #336ca680),
   }
+
 }
