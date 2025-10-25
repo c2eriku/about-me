@@ -1,14 +1,14 @@
 'use client';
 
 import ExpCard from '@/components/ExpCard/ExpCard';
-import { jds } from '@/constants/profileConstants';
+import { jobDescriptions } from '@/constants/techData';
 
 export default function Experience() {
   return (
     <>
       <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">Experience</h1>
       <div>
-        <ExpCard title="Software Engineer" jds={jds} date={''}></ExpCard>
+        <ExpCard title="Software Engineer" jds={jobDescriptions} date={''}></ExpCard>
       </div>
     </>
   );

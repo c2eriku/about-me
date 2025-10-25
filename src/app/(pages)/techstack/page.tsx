@@ -1,6 +1,6 @@
 'use client';
 
-import { explores, works } from '@/constants/profileConstants';
+import { explores, workWith } from '@/constants/techData';
 import TechBadge from './components/TechBadge';
 
 export default function Techstack() {
@@ -21,7 +21,7 @@ export default function Techstack() {
         <div className="flex-1">
           <div>Also Working With</div>
           <div className="flex flex-wrap gap-2">
-            {works.map((work, index) => (
+            {workWith.map((work, index) => (
               <TechBadge key={index} {...work} />
             ))}
           </div>

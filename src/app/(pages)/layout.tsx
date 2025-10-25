@@ -40,6 +40,11 @@ export default function Layout({
                   Experience
                 </Link>
               </li>
+              <li>
+                <Link href="/techstack" className="block px-4 py-2">
+                  Tech-Stack
+                </Link>
+              </li>
               <li className="ml-auto">
                 <div className="flex h-full gap-2 align-middle">
                   <a

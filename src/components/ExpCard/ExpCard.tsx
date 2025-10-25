@@ -1,6 +1,6 @@
 import { BsBank2 } from 'react-icons/bs';
 import TechBadge from './TechBadge';
-import { techCores, techTools } from '@/constants/profileConstants';
+import { techCores, techTools } from '@/constants/techData';
 
 interface ExpCardProps {
   title?: string;
