@@ -29,14 +29,19 @@ export default function Layout({
         <VantaNet></VantaNet>
         <div className="liquidGlass-wrapper dock flex-col">
           <nav>
-            <ul className="flex">
+            <ul className="flex items-center">
               <li>
                 <Link href="/" className="block px-4 py-2">
                   Home
                 </Link>
               </li>
-              <li className="m-auto">
-                <div className="flex gap-2">
+              <li>
+                <Link href="/experience" className="block px-4 py-2">
+                  Experience
+                </Link>
+              </li>
+              <li className="ml-auto">
+                <div className="flex h-full gap-2 align-middle">
                   <a
                     href="https://github.com/c2eriku"
                     className="flex rounded-xl bg-[#181717] p-1.5 text-white"
@@ -49,13 +54,13 @@ export default function Layout({
                   >
                     <IoMail size={24} />
                   </a>
-                  <LightDarkModeSwitch></LightDarkModeSwitch>
                 </div>
               </li>
             </ul>
           </nav>
           <div className="dock">{children}</div>
         </div>
+        <LightDarkModeSwitch></LightDarkModeSwitch>
       </div>
     </ThemeProvider>
   );
