@@ -25,7 +25,7 @@ export default function Layout({
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem={false}>
-      <div className="flex h-dvh items-center justify-center p-2">
+      <div className="flex h-dvh items-center justify-center p-8">
         <VantaNet></VantaNet>
         <div className="liquidGlass-wrapper dock flex-col">
           <nav>

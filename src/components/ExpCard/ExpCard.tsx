@@ -15,7 +15,7 @@ export default function ExpCard({ title, jds }: ExpCardProps) {
   return (
     <div className="grid grid-cols-[auto_1fr] gap-4 p-6 pr-12 pl-1">
       {/* 左側公司 icon */}
-      <div aria-label="companyIcon">
+      <div aria-label="companyIcon" className="flex items-center">
         <div className="w-fit rounded-xl bg-gradient-to-b from-cyan-100 to-blue-100 p-4">
           <BsBank2 size={32} />
         </div>
