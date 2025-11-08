@@ -22,10 +22,10 @@ export async function getUsersAvantar() {
   }
 }
 
-export async function getProjectDescription(projectName: string) {
+export async function getProjectDetail(projectName: string) {
   try {
     const response = await githubApiClient.get(`/repos/c2eriku/${projectName}`);
-    return response.data.description;
+    return response.data;
   } catch (error) {
     console.error('Error fetching GitHub repositories:', error);
     throw error;

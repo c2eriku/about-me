@@ -1,8 +1,8 @@
 import { IconType } from 'react-icons';
 
 export interface TechBadgeProps {
-  icon: IconType;
   title: string;
+  icon: IconType;
   color: string;
 }
 

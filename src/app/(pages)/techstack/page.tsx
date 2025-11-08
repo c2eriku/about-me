@@ -1,8 +1,32 @@
 'use client';
 
-import { explores, workWith } from '@/constants/techData';
 import TechBadge from './components/TechBadge';
 import MyProjects from './MyProjects';
+import { TechBadges } from '@/constants/TechBadges';
+
+const explores = [
+  'React',
+  'Next.js',
+  'Tailwind',
+  'JavaScript',
+  'TypeScript',
+  'CSS',
+  'HTML',
+  'Sass',
+  'ESLint',
+  'GitHub',
+];
+
+const workWiths = [
+  'Java',
+  'Angular',
+  'SpringFramework',
+  'RDBMS',
+  'Jenkins',
+  'GitLab',
+  'Nx',
+  'Sonarlint',
+];
 
 export default function Techstack() {
   return (
@@ -15,15 +39,15 @@ export default function Techstack() {
           <h2>What I Explore</h2>
           <div className="flex flex-wrap gap-1">
             {explores.map((explore, index) => (
-              <TechBadge key={index} {...explore} />
+              <TechBadge key={index} title={explore} {...TechBadges.get(explore)!} />
             ))}
           </div>
         </div>
         <div className="min-w-50 flex-1 p-6">
           <h2>Also Working With</h2>
           <div className="flex flex-wrap gap-1">
-            {workWith.map((work, index) => (
-              <TechBadge key={index} {...work} />
+            {workWiths.map((work, index) => (
+              <TechBadge key={index} title={work} {...TechBadges.get(work)!} />
             ))}
           </div>
         </div>

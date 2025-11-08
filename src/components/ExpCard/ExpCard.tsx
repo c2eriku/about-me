@@ -1,6 +1,6 @@
 import { BsBank2 } from 'react-icons/bs';
 import TechBadge from './TechBadge';
-import { techCores, techTools } from '@/constants/techData';
+import { TechBadges } from '@/constants/TechBadges';
 
 interface ExpCardProps {
   title?: string;
@@ -10,6 +10,19 @@ interface ExpCardProps {
   tags?: string[];
   jds: string[];
 }
+
+const techTools = [
+  'Angular',
+  'SpringFramework',
+  'RDBMS',
+  'Jenkins',
+  'GitLab',
+  'Nx',
+  'ESLint',
+  'Sonarlint',
+];
+
+const techCores = ['JavaScript', 'TypeScript', 'CSS', 'HTML', 'Sass', 'Java'];
 
 export default function ExpCard({ title, jds }: ExpCardProps) {
   return (
@@ -30,12 +43,12 @@ export default function ExpCard({ title, jds }: ExpCardProps) {
       <div className="col-span-2 sm:col-start-2">
         <div className="flex flex-wrap gap-1">
           {techTools.map((tool, index) => (
-            <TechBadge key={index} {...tool} />
+            <TechBadge key={index} title={tool} {...TechBadges.get(tool)!} />
           ))}
         </div>
         <div className="flex flex-wrap gap-1">
           {techCores.map((core, index) => (
-            <TechBadge key={index} {...core} />
+            <TechBadge key={index} title={core} {...TechBadges.get(core)!} />
           ))}
         </div>
       </div>
