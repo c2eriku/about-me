@@ -1,8 +1,7 @@
 'use client';
 
-import TechBadge from './components/TechBadge';
+import GroupCard from './components/GroupCard';
 import MyProjects from './MyProjects';
-import { TechBadges } from '@/constants/TechBadges';
 
 const explores = [
   'React',
@@ -31,27 +30,23 @@ const workWiths = [
 export default function Techstack() {
   return (
     <div className="techstack">
-      <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">
-        What I Know Techstack
-      </h1>
-      <div className="flex flex-wrap">
-        <div className="min-w-50 flex-1 p-6">
-          <h2>What I Explore</h2>
-          <div className="flex flex-wrap gap-1">
-            {explores.map((explore, index) => (
-              <TechBadge key={index} title={explore} {...TechBadges.get(explore)!} />
-            ))}
-          </div>
-        </div>
-        <div className="min-w-50 flex-1 p-6">
-          <h2>Also Working With</h2>
-          <div className="flex flex-wrap gap-1">
-            {workWiths.map((work, index) => (
-              <TechBadge key={index} title={work} {...TechBadges.get(work)!} />
-            ))}
-          </div>
+      <h1 className="mt-6 mb-4 text-3xl font-bold text-gray-900 dark:text-white">What I Know</h1>
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+        Tech stacks & Side Projects
+      </h2>
+      <h3 className="text-md mb-10 text-gray-900 dark:text-white">
+        An overview of my skills and experience.
+      </h3>
+
+      <div className="mb-10">
+        <h1 className="mb-2 text-2xl">Tech Stack</h1>
+        <div className="flex flex-wrap gap-5">
+          <GroupCard title="What I Explore" techs={explores}></GroupCard>
+          <GroupCard title="Also Working With" techs={workWiths}></GroupCard>
         </div>
       </div>
+
+      <h1 className="mb-2 text-2xl">Side Projects</h1>
       <MyProjects></MyProjects>
     </div>
   );

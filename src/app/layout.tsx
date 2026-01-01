@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Ubuntu } from 'next/font/google';
 import './globals.css';
+import { Geist, Geist_Mono, Inter, Ubuntu } from 'next/font/google';
 import InteractHub from '@/components/InteractHub/InteractHub';
 import Script from 'next/dist/client/script';
 
@@ -18,6 +18,11 @@ const ubuntu = Ubuntu({
   variable: '--font-ubuntu',
   subsets: ['latin'],
   weight: '300',
+});
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
