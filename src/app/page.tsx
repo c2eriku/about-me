@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <nav className="mt-auto w-full p-2 tracking-wide">
             <ul
-              className={`${styles.navList} flex justify-center p-[3em] text-right font-extrabold sm:flex-col sm:gap-4 sm:text-right sm:text-4xl`}
+              className={`${styles.navList} flex justify-center p-[3em] text-right font-extrabold sm:flex-col sm:gap-4 sm:p-8 sm:text-right sm:text-4xl`}
             >
               <Link href="/" className="block text-nowrap">
                 About
