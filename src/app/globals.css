@@ -25,7 +25,7 @@ body {
 
 .light {
   --bg-primary: #F5F5F5;
-  --bg-secondary: #E0E5EC;
+  --bg-secondary: #000000;
   /* --bg-secondary: #1a202c; */
 }
 
@@ -36,32 +36,41 @@ body {
   color: #f7fafc;
 }
 
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 160deg;
+  inherits: false;
+}
+
 body::before {
-  animation: breath 10s infinite;
+  animation: breath 12s infinite ease-in-out;
   content: "";
   z-index: -10;
   position: absolute;
   display: block;
   inset: 0;
   opacity: 0.3;
-  filter: contrast(100%) brightness(100%);
+  filter: contrast(1600%) brightness(500%);
   background:
     url("/images/noise.svg"),
-    linear-gradient(160deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary));
+    linear-gradient(var(--gradient-angle), transparent, transparent, var(--bg-secondary));
 }
+
 
 /* background: linear-gradient(0deg, #d7deaa, #336ca663), */
 @keyframes breath {
   0% {
-    filter: contrast(100%) brightness(100%);
+    --gradient-angle: 120deg;
+    filter: contrast(1) brightness(1);
   }
 
   50% {
-    filter: contrast(150%) brightness(100%);
+    --gradient-angle: 160deg;
+    filter: contrast(4) brightness(1);
   }
 
   100% {
-    filter: contrast(100%) brightness(100%);
+    --gradient-angle: 120deg;
+    filter: contrast(1) brightness(1);
   }
-
 }

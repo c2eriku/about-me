@@ -25,6 +25,7 @@ export default function Layout({
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem={false}>
+      <VantaNet></VantaNet>
       <div className="h-dvh">
         <nav>
           <ul className="flex items-center">
@@ -43,19 +44,21 @@ export default function Layout({
                 Tech-Stack
               </Link>
             </li>
-            <li className="ml-auto">
+            <li className="ml-auto p-2">
               <div className="flex h-full gap-2 align-middle">
                 <a
                   href="https://github.com/c2eriku"
-                  className="flex rounded-xl bg-[#181717] p-1.5 text-white"
+                  className="flex rounded-full bg-[#181717] p-1.5 text-white sm:px-3"
                 >
-                  <FaGithubAlt size={24} />
+                  <FaGithubAlt size={24} className="sm:mr-1" />
+                  <span className="hidden sm:inline">GitHub</span>
                 </a>
                 <a
                   href={`mailto:${name}@${domain}`}
-                  className="flex rounded-xl bg-[#b3281e] p-1.5 font-bold text-white"
+                  className="flex rounded-full bg-[#b3281e] p-1.5 font-bold text-white sm:px-3"
                 >
-                  <IoMail size={24} />
+                  <IoMail size={24} className="sm:mr-1" />
+                  <span className="hidden sm:inline">Email</span>
                 </a>
               </div>
             </li>
@@ -63,9 +66,8 @@ export default function Layout({
           {/* <LightDarkModeSwitch></LightDarkModeSwitch> */}
         </nav>
         <div className="flex justify-center p-8">
-          <VantaNet></VantaNet>
           <div className="flex-col">
-            <div className="dock">{children}</div>
+            <div className="dock max-w-7xl">{children}</div>
           </div>
         </div>
       </div>

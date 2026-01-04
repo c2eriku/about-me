@@ -32,13 +32,12 @@ export default function Home() {
         {/* <VantaFog></VantaFog> */}
         {/* <VantaBirds></VantaBirds> */}
         <P5Wave></P5Wave>
-        <div className="fixed -z-50 h-dvh w-dvw p-2 sm:p-16">
+        <div className="fixed -z-50 h-dvh w-dvw p-2 sm:p-12">
           <div className="border-light h-full w-full border-2"></div>
         </div>
 
         <div className="flex h-dvh w-dvw flex-col overflow-hidden p-2 sm:p-16">
           <div className="h-full p-2 sm:p-16">
-            <LightDarkModeSwitch></LightDarkModeSwitch>
             <div className="mt-12 inline-flex flex-wrap justify-center sm:mt-0">
               <div className="relative">
                 <motion.div
@@ -90,18 +89,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <nav className="mt-auto w-full p-2 tracking-wide">
+          <nav className="mt-auto w-full tracking-wide">
             <ul
-              className={`${styles.navList} flex justify-center p-[3em] text-right font-extrabold sm:flex-col sm:gap-4 sm:p-8 sm:text-right sm:text-4xl`}
+              className={`${styles.navList} flex justify-center p-[3em] text-right font-extrabold sm:gap-4 sm:p-8 md:flex-col md:text-right md:text-4xl`}
             >
-              <Link href="/" className="block text-nowrap">
-                About
-              </Link>
               <Link href="/experience" className="block text-nowrap">
                 Experience
               </Link>
               <Link href="/techstack" className="block text-nowrap">
-                TechStack
+                Tech-Stack & Side
               </Link>
             </ul>
           </nav>

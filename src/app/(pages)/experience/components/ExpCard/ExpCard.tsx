@@ -50,12 +50,10 @@ export default function ExpCard({ title, jds }: ExpCardProps) {
           <div className="p-8">
             <ul className="col-span-2 list-inside list-disc text-gray-700 sm:col-start-2">
               {jds.map((jd, index) => (
-                <>
-                  <li key={index} className="">
-                    <dt className="inline font-semibold">{jd.item}</dt>
-                    <dd className="">{jd.description}</dd>
-                  </li>
-                </>
+                <li key={index} className="">
+                  <dt className="inline font-semibold">{jd.item}</dt>
+                  <dd className="">{jd.description}</dd>
+                </li>
               ))}
             </ul>
           </div>
