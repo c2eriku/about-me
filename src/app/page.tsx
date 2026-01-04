@@ -32,7 +32,7 @@ export default function Home() {
         {/* <VantaFog></VantaFog> */}
         {/* <VantaBirds></VantaBirds> */}
         <P5Wave></P5Wave>
-        <div className="fixed -z-50 h-dvh w-dvw p-2 sm:p-12">
+        <div className="fixed -z-50 hidden h-dvh w-dvw p-2 sm:block sm:p-8">
           <div className="border-light h-full w-full border-2"></div>
         </div>
 
