@@ -11,7 +11,7 @@ export default function LightDarkModeSwitch() {
   const isDarkMode = theme === 'dark';
 
   return (
-    <div className="absolute top-0 right-0 m-4">
+    <div className="m-4">
       <button
         onClick={() => setTheme(isDarkMode ? 'light' : 'dark')}
         className={clsx(

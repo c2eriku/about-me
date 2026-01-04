@@ -88,40 +88,16 @@ export default function Home() {
               </div>
 
               <nav className="absolute right-0 bottom-0 m-6 w-fit tracking-wide">
-                <ul className="flex flex-col text-right text-4xl font-extrabold">
-                  <motion.li
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 0.1 },
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Link href="/" className="block px-4 py-2">
-                      About
-                    </Link>
-                  </motion.li>
-                  <motion.li
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 0.1 },
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Link href="/experience" className="block px-4 py-2">
-                      Experience
-                    </Link>
-                  </motion.li>
-                  <motion.li
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 0.1 },
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Link href="/techstack" className="block px-4 py-2">
-                      What I Know Techstack
-                    </Link>
-                  </motion.li>
+                <ul className="flex flex-col text-right font-extrabold sm:text-4xl">
+                  <Link href="/" className="block px-4 py-2">
+                    About
+                  </Link>
+                  <Link href="/experience" className="block px-4 py-2">
+                    Experience
+                  </Link>
+                  <Link href="/techstack" className="block px-4 py-2">
+                    Tech-stack
+                  </Link>
                 </ul>
               </nav>
             </div>

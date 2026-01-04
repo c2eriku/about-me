@@ -8,8 +8,8 @@ interface GroupCardProps {
 
 export default function GroupCard({ title, techs }: GroupCardProps) {
   return (
-    <div className="min-w-50 flex-1 overflow-auto rounded-lg bg-white shadow-md">
-      <div className="bg-black/10 p-2 py-1">
+    <div className="liquid-wrapper min-w-50 flex-1 overflow-auto rounded-lg">
+      <div className="bg-slate-600/20 p-2 py-1">
         <h2>{title}</h2>
       </div>
       <div className="flex flex-wrap gap-1 p-4">

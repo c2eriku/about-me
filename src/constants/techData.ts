@@ -1,4 +1,5 @@
-import TechBadge from '@/components/ExpCard/TechBadge';
+import { JdItem } from '@/api/models/JdItem';
+import TechBadge from '@/app/(pages)/experience/components/ExpCard/TechBadge';
 import { IconType } from 'react-icons';
 import { FaJava } from 'react-icons/fa6';
 import { RiNextjsFill, RiReactjsFill, RiTailwindCssFill } from 'react-icons/ri';
@@ -69,11 +70,39 @@ export const techTools = allTechs.filter((t) => t.tags.includes(Tg.Tools));
 const exploreTitles = new Set(explores.map((e) => e.title));
 export const workWith = [...techCores, ...techTools].filter((t) => !exploreTitles.has(t.title));
 
-// 3️⃣ Job Descriptions
-export const jobDescriptions = [
-  'Cross-department collaboration involving 25+ team members on the Web-based system project.',
-  'Build front-end UI with Angular and back-end APIs with Spring Framework.',
-  'Created 2 shared modules, reducing repetitive code by 20% and improving overall project development efficiency.',
-  'Mentored 3 new team members by providing structured learning roadmap and support.',
-  'Supported 3 interns by sharing experiences and offering coding suggestions, helping to achieve learning goals.',
+// // 3️⃣ Job Descriptions
+// export const jobDescriptions:JdItem[] = [
+//   'Cross-department collaboration involving 25+ team members on the Web-based system project.',
+//   'Build front-end UI with Angular and back-end APIs with Spring Framework.',
+//   'Created 2 shared modules, reducing repetitive code by 20% and improving overall project development efficiency.',
+//   'Mentored 3 new team members by providing structured learning roadmap and support.',
+//   'Supported 3 interns by sharing experiences and offering coding suggestions, helping to achieve learning goals.',
+// ];
+
+export const bankJdItems: JdItem[] = [
+  {
+    item: 'Cross-department collaboration',
+    description:
+      'Collaborated with over 25 members across 3 teams on a large-scale web-based system project.',
+  },
+  {
+    item: 'Front-end and back-end development',
+    description:
+      'Built front-end user interfaces using Angular and developed RESTful back-end APIs with the Spring Framework.',
+  },
+  {
+    item: 'Shared module architecture optimization',
+    description:
+      'Designed and implemented 2 shared modules, reducing repetitive code by 20% and improving overall development efficiency.',
+  },
+  {
+    item: 'New team member mentorship',
+    description:
+      'Mentored 4 new team members by providing a structured learning roadmap, technical guidance, and ongoing support.',
+  },
+  {
+    item: 'Intern coaching and support',
+    description:
+      'Supported 3 interns by sharing practical development experience and code review feedback, helping them successfully achieve their learning objectives.',
+  },
 ];

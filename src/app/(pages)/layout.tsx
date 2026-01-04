@@ -25,47 +25,49 @@ export default function Layout({
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem={false}>
-      <div className="flex h-dvh items-center justify-center p-8">
-        <VantaNet></VantaNet>
-        <div className="liquidGlass-wrapper dock flex-col">
-          <nav>
-            <ul className="flex items-center">
-              <li>
-                <Link href="/" className="block px-4 py-2">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/experience" className="block px-4 py-2">
-                  Experience
-                </Link>
-              </li>
-              <li>
-                <Link href="/techstack" className="block px-4 py-2">
-                  Tech-Stack
-                </Link>
-              </li>
-              <li className="ml-auto">
-                <div className="flex h-full gap-2 align-middle">
-                  <a
-                    href="https://github.com/c2eriku"
-                    className="flex rounded-xl bg-[#181717] p-1.5 text-white"
-                  >
-                    <FaGithubAlt size={24} />
-                  </a>
-                  <a
-                    href={`mailto:${name}@${domain}`}
-                    className="flex rounded-xl bg-[#b3281e] p-1.5 font-bold text-white"
-                  >
-                    <IoMail size={24} />
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </nav>
-          <div className="dock">{children}</div>
+      <div className="h-dvh">
+        <nav>
+          <ul className="flex items-center">
+            <li>
+              <Link href="/" className="block px-4 py-2">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/experience" className="block px-4 py-2">
+                Experience
+              </Link>
+            </li>
+            <li>
+              <Link href="/techstack" className="block px-4 py-2">
+                Tech-Stack
+              </Link>
+            </li>
+            <li className="ml-auto">
+              <div className="flex h-full gap-2 align-middle">
+                <a
+                  href="https://github.com/c2eriku"
+                  className="flex rounded-xl bg-[#181717] p-1.5 text-white"
+                >
+                  <FaGithubAlt size={24} />
+                </a>
+                <a
+                  href={`mailto:${name}@${domain}`}
+                  className="flex rounded-xl bg-[#b3281e] p-1.5 font-bold text-white"
+                >
+                  <IoMail size={24} />
+                </a>
+              </div>
+            </li>
+          </ul>
+          {/* <LightDarkModeSwitch></LightDarkModeSwitch> */}
+        </nav>
+        <div className="flex justify-center p-8">
+          <VantaNet></VantaNet>
+          <div className="flex-col">
+            <div className="dock">{children}</div>
+          </div>
         </div>
-        <LightDarkModeSwitch></LightDarkModeSwitch>
       </div>
     </ThemeProvider>
   );

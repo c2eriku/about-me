@@ -25,12 +25,10 @@
 }
 
 
-/* LIQUID GLASS STYLES */
+/* LIQUID STYLES */
 
-.liquidGlass-wrapper {
+.liquid-wrapper {
     position: relative;
-    display: flex;
-    font-weight: 600;
     background: rgba(255, 255, 255, 0.35);
     overflow: hidden;
     box-shadow:
@@ -39,7 +37,7 @@
         inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
 }
 
 /* OTHER STYLES */

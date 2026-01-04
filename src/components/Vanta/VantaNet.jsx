@@ -53,7 +53,7 @@ export default function VantaNet() {
       />
 
       {/* 背景容器 */}
-      <div ref={vantaRef} className="absolute inset-0 -z-20 h-dvh w-dvw" />
+      <div ref={vantaRef} className="fixed inset-0 -z-20" />
     </>
   );
 }

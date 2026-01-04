@@ -21,15 +21,15 @@ export function ProjectCard({ projectname, techstacks }: ProjectCardProps) {
     });
   }, []);
   return (
-    <div className="flex-1 rounded-lg bg-white shadow-md">
+    <div className="liquid-wrapper rounded-lg p-4 sm:flex-1">
       <div>
-        <div className="mb-2 flex items-center p-2">
-          <div className="mx-2 w-fit rounded-md bg-gradient-to-b from-cyan-100 to-blue-100 p-2">
+        <div className="2 mb-2 flex items-center">
+          <div className="mr-4 ml-2 w-fit rounded-md bg-gradient-to-b from-cyan-100 to-blue-100 p-2">
             <BsFolder size={24} />
           </div>
-          <h1 className="text-xl">{projectname}</h1>
-          <div className="ml-auto inline-flex items-center justify-center rounded-full border-1 border-slate-300 bg-slate-100 p-1 px-2.5">
-            {dayjs(createAt).format('YYYY-MM-DD')}
+          <h1 className="text-xl font-medium text-nowrap">{projectname}</h1>
+          <div className="ml-auto inline-flex items-center justify-center rounded-full border-1 border-slate-300 bg-slate-100 p-1 px-2.5 text-nowrap">
+            {dayjs(createAt).format('YYYY-MM')}
           </div>
         </div>
       </div>
