@@ -30,7 +30,7 @@ export default function ExpCard({ title, jds }: ExpCardProps) {
   return (
     <>
       <div className="liquid-wrapper flex flex-wrap rounded-xl">
-        <section className="p-8 sm:flex-2">
+        <section className="p-2 sm:flex-2 sm:p-8">
           <div className="flex flex-col gap-4 border-b-1 p-6 py-4 pb-8 sm:flex-row">
             <div className="hidden sm:block">
               <div className="w-fit rounded-xl bg-gradient-to-b from-cyan-100 to-blue-100 p-4">
@@ -66,16 +66,16 @@ export default function ExpCard({ title, jds }: ExpCardProps) {
             <div className="mb-4">
               <div className="mb-2 border-b-1 py-4 text-xl font-semibold">Tech Tools</div>
               <div className="flex flex-wrap gap-1">
-                {techTools.map((tool, index) => (
-                  <TechBadge key={index} title={tool} {...TechBadges.get(tool)!} />
+                {techTools.map((tool) => (
+                  <TechBadge key={tool} title={tool} {...TechBadges.get(tool)!} />
                 ))}
               </div>
             </div>
             <div>
               <div className="mb-2 border-b-1 py-4 text-xl font-semibold">Tech Cores</div>
               <div className="flex flex-wrap gap-1">
-                {techCores.map((core, index) => (
-                  <TechBadge key={index} title={core} {...TechBadges.get(core)!} />
+                {techCores.map((core) => (
+                  <TechBadge key={core} title={core} {...TechBadges.get(core)!} />
                 ))}
               </div>
             </div>

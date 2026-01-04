@@ -39,3 +39,15 @@
                 transform: rotate(360deg);
         }
 }
+
+.navList>*:not(:last-child)::after {
+        content: '．';
+        padding: 0 .5rem;
+}
+
+@media (min-width: 640px) {
+        .navList>*::after {
+                content: none;
+                display: none;
+        }
+}
